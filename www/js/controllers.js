@@ -2,10 +2,14 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
-
-  }])
-  .controller('MyCtrl2', [function() {
-
-  }]);
+angular.module('glosk.controllers', []).
+    controller('MyCtrl1', ['$scope', 'navSvc', function ($scope, navSvc) {
+        $scope.slidePage = function (path, type) {
+            navSvc.slidePage(path, type);
+        };
+    }])
+    .controller('MyCtrl2', ['$scope', 'navSvc',function ($scope, navSvc) {
+        $scope.slidePage = function (path, type) {
+            navSvc.slidePage(path, type);
+        };
+    }]);

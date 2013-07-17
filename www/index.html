@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="glosk">
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/topcoat-mobile-dark.css">
+        <link rel="stylesheet" type="text/css" href="css/mobile-nav.css" />
+        <!--link rel="stylesheet" type="text/css" href="css/topcoat-mobile-dark.css"-->
         <link rel="stylesheet" type="text/css" href="css/screen.css" />
         <title>Glosk</title>
     </head>
     <body>
+
+    <div class="topcoat-navigation-bar">
+        <div class="topcoat-navigation-bar__item center three-quarters">
+            <h1 class="topcoat-navigation-bar__title">PhoneGap+AngularJS</h1>
+        </div>
+        <div class="topcoat-navigation-bar__item right quarter">
+            <a class="topcoat-icon-button--quiet" ng-click="changeSettings()">
+                <span class="topcoat-icon settings-icon"></span>
+            </a>
+        </div>
+    </div>
+
         <div class="app">
             <h1>Apache Cordova</h1>
             <div id="deviceready" class="blink">
@@ -15,22 +30,21 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div>
-        <ul class="menu">
-            <li><a href="#/view1">view1</a></li>
-            <li><a href="#/view2">view2</a></li>
-        </ul>
 
-        <div ng-view></div>
-        <script type="text/javascript" src="cordova.js"></script>
+        <mobile-view/>
+
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
         <script type="text/javascript" src="js/index.js"></script>
         <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-mobile.js"></script>
+        <script src="lib/angular/mobile-nav.js"></script>
         <script src="js/app.js"></script>
         <script src="js/services.js"></script>
         <script src="js/controllers.js"></script>
         <script src="js/filters.js"></script>
         <script src="js/directives.js"></script>
         <script type="text/javascript">
-            app.initialize();
+            //app.initialize();
         </script>
     </body>
 </html>
