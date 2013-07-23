@@ -33,6 +33,7 @@ angular.module('glosk.services', []).
             }, false);
 
             return function () {
+            	alert('phonegapReady return function');
                 return impl.apply(this, arguments);
             };
         };

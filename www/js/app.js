@@ -2,7 +2,7 @@
 
 
 // Declare app level module which depends on filters, and services
-var glosk = angular.module('glosk', ['glosk.filters', 'glosk.services', 'glosk.directives', 'glosk.controllers', 'ajoslin.mobile-navigate', 'ngMobile']).
+var glosk = angular.module('glosk', ['glosk.filters', 'glosk.services', 'glosk.directives', 'ajoslin.mobile-navigate', 'ngMobile']).
     config(function ($compileProvider){
         $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
     }).
